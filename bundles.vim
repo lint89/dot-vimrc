@@ -102,4 +102,10 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'fisadev/fisa-vim-colorscheme'
 
+"--------------
+" add by lint
+"--------------
+"------- Ruby --------
+Bundle 'tbastos/vim-lua'
+
 filetype plugin indent on     " required!

@@ -1,5 +1,8 @@
 source ~/.vim/bundles.vim
 
+" add by lint
+let mapleader=","
+
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 
@@ -14,12 +17,12 @@ syntax on
 "--------
 " color scheme
 set background=dark
-color solarized
+" color solarized
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+" set cursorline cursorcolumn
 
 " search
 set incsearch
@@ -265,4 +268,18 @@ if has("gui_running")
     map <D-8> 8gt
     map <D-9> 9gt
     map <D-0> :tablast<CR>
+endif
+
+
+" add by lint
+let g:go_version_warning = 0
+nmap <leader>w :w<CR>
+nmap <leader>q :q<CR>
+
+set relativenumber number
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
